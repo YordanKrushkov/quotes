@@ -1,7 +1,5 @@
 const { v4 } = require('uuid');
-const fs=require('fs')
-const path=require('path')
-const pathFile=path.join(__dirname,'/quotes.json');
+const {saveQuote}= require('../controllers/database')
 class Quotes {
     constructor(text,author){
         this.id= v4();
@@ -17,22 +15,7 @@ class Quotes {
             author:this.author,
         }
 
-        fs.readFile(pathFile,(err,dbData)=>{
-            if(err){
-                console.log(err);
-                return;
-            }
-            const quotes=JSON.parse(dbData)
-           
-            quotes.push(newQuote);
-
-            fs.writeFile(pathFile,JSON.stringify(quotes), err=>{
-                if(err){
-                    console.log(err);
-                }
-                console.log('New quote is successfuly stored');
-            })
-        })
+        saveQuote(newQuote)
       
     }
 }

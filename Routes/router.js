@@ -1,12 +1,15 @@
 const express= require('express')
 const router = express.Router();
-const {readQuotes}= require('../controllers/readQuotes')
+const {readAllQuotes}= require('../controllers/quotes')
 
  router.get('/',(req, res)=>{
-    res.render('home',{
-       title: 'Quotes | Home',
-       quotes:readQuotes(),
-    })
+   readAllQuotes((quotes)=>{
+      res.render('home',{
+         title: 'Quotes | Home',
+         quotes:quotes
+      })
+   })
+   
  })
  router.get('/publush',(req, res)=>{
    res.render('publish',{
