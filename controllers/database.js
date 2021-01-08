@@ -3,7 +3,7 @@ const path = require('path');
 const pathFile = path.join(__dirname, '..', '/models/quotes.json');
 
 
-const saveQuote = (quote) => {
+const saveQuote = (quote, callback) => {
     readQuotes((quotes) => {
         quotes.push(quote)
         fs.writeFile(pathFile, JSON.stringify(quotes), err => {
@@ -11,6 +11,7 @@ const saveQuote = (quote) => {
                 console.log(err);
             }
             console.log('New quote is successfuly stored');
+            callback()
         })
 
     })

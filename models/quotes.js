@@ -7,7 +7,7 @@ class Quotes {
         this.author= author
     }
 
-    save(){
+    save(callback){
 
         const newQuote ={
             id:this.id,
@@ -15,7 +15,7 @@ class Quotes {
             author:this.author,
         }
 
-        saveQuote(newQuote)
+        saveQuote(newQuote, callback)
       
     }
 }
