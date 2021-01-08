@@ -8,18 +8,47 @@ body{
     margin:0;
     padding: 0;
 }
+
+/* HEADER & NAV */
 header{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: lightgrey;
     margin-bottom:20px;
     height: 50px;
 }
+header h1{
+    margin-left: 20px;
+text-transform: uppercase;
 
-.nav{
-    width: 40%;
 }
-
+.nav{
+    width: 30%;
+} 
 .nav-ul{
     display: flex;
     justify-content: space-around;
+    list-style: none;
+    height: 100%;
+
 }
+.nav-ul li a{
+font-size: 24px;
+text-decoration: none;
+text-transform: uppercase;
+color: black;
+}
+.nav-ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
+.nav-ul li:hover{
+    background-color: white;
+}
+
+
