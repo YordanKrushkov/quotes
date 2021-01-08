@@ -1,13 +1,12 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
-html{
-    margin:0;
+@import url("https://fonts.googleapis.com/css2?family=Redressed&display=swap");
+html {
+    margin: 0;
     padding: 0;
     height: 100vh;
-    font-family: 'Redressed', cursive;
+    font-family: "Redressed", cursive;
 }
-body{
-    margin:0;
+body {
+    margin: 0;
     padding: 0;
     height: 100vh;
     display: flex;
@@ -16,34 +15,33 @@ body{
 }
 
 /* HEADER & NAV */
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: lightgrey;
-    margin-bottom:20px;
+    margin-bottom: 20px;
     height: 50px;
 }
-header h1{
+header h1 {
     margin-left: 20px;
     font-size: 45px;
 }
-.nav{
+.nav {
     width: 30%;
-} 
-.nav-ul{
+}
+.nav-ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
     height: 100%;
-
 }
-.nav-ul li a{
-font-size: 34px;
-text-decoration: none;
-color: black;
+.nav-ul li a {
+    font-size: 34px;
+    text-decoration: none;
+    color: black;
 }
-.nav-ul li{
+.nav-ul li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,16 +49,16 @@ color: black;
     width: 100%;
     text-align: center;
 }
-.nav-ul li:hover{
+.nav-ul li:hover {
     background-color: white;
 }
 
 /* MAIN & Body & POST */
-#title{
+#title {
     text-align: center;
     font-size: 48px;
 }
-.postContainer{
+.postContainer {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -69,7 +67,7 @@ color: black;
     width: 80%;
 }
 
-.post{
+.post {
     width: 800px;
     height: 100%;
     background-color: lightgrey;
@@ -78,23 +76,22 @@ color: black;
 }
 
 .post p {
-    
     font-size: 30px;
 }
-figcaption{
+figcaption {
     display: flex;
     justify-content: flex-end;
 }
 
-cite{
+cite {
     font-size: 25px;
     margin: 5px;
     padding-right: 10px;
 }
 
 /* FOOTER */
-footer{
-    width:100%;
+footer {
+    width: 100%;
     height: max-content;
     background-color: lightgrey;
     display: flex;
@@ -102,37 +99,35 @@ footer{
 }
 
 /* PUBLISH */
-#formContainer{
+#formContainer {
     width: 80%;
-    margin:0 auto 200px auto;
+    margin: 0 auto 200px auto;
 }
-#formContainer h1{
+#formContainer h1 {
     text-align: center;
     font-size: 46px;
 }
 
-#formContainer form{
+#formContainer form {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
-#formContainer form label{
-font-size: 30px;
+#formContainer form label {
+    font-size: 30px;
 }
 #formContainer form input {
-    margin:10px;
+    margin: 10px;
     height: 30px;
     outline: none;
     border-radius: 10px;
-    font-family: 'Redressed', cursive;
+    font-family: "Redressed", cursive;
     font-size: 24px;
-    border:2px solid lightgrey;
-
+    border: 2px solid lightgrey;
 }
-#text{
-    font-family: 'Redressed', cursive;
-    border:2px solid lightgrey;
+#text {
+    font-family: "Redressed", cursive;
+    border: 2px solid lightgrey;
     margin: 10px;
     width: 50%;
     height: 100px;
@@ -141,15 +136,31 @@ font-size: 30px;
     font-size: 24px;
     border-radius: 10px;
     padding-left: 10px;
-
 }
 
-#formContainer form button{
-    font-family: 'Redressed', cursive;
+#formContainer form button {
+    font-family: "Redressed", cursive;
     font-size: 30px;
     background-color: lightgrey;
     border-radius: 10px;
     width: 140px;
     height: 40px;
-    margin:10px
+    margin: 10px;
+}
+
+/* ABOUT */
+#aboutUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 400px auto;
+}
+
+#aboutUs h1 {
+    font-size: 46px;
+}
+
+#aboutUs p {
+    font-size: 30px;
 }
