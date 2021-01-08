@@ -1,7 +1,7 @@
 const express= require('express')
 const router = express.Router();
 const {readAllQuotes}= require('../controllers/quotes')
-
+const Quotes =require('../models/quotes')
  router.get('/',(req, res)=>{
    readAllQuotes((quotes)=>{
       res.render('home',{
@@ -11,13 +11,20 @@ const {readAllQuotes}= require('../controllers/quotes')
    })
    
  })
- router.get('/publush',(req, res)=>{
+ router.get('/publish',(req, res)=>{
    res.render('publish',{
       title: 'Quotes | Publish'
    })
 })
-router.post('/publush',(req, res)=>{
-   
+router.post('/publish',(req, res)=>{
+   const {
+      text,
+      author
+   }=req.body
+   const quote= new Quotes(text,author)
+   quote.save(()=>{
+      res.redirect('/');
+   })
 })
 
 router.get('/about',(req, res)=>{
