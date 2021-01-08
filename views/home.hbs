@@ -1,7 +1,11 @@
-<h1>Hello</h1>
+<h1 id="title">“What worries you masters you.”</h1>
 
 <div class="postContainer">
+    {{#if quotes}}
     {{#each quotes}}
     {{>quote}}
     {{/each}}
+    {{else}}
+    <h1>Ther are no quotes</h1>
+    {{/if}}
 </div>

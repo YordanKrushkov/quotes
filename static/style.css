@@ -1,12 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
 html{
     margin:0;
     padding: 0;
     height: 100vh;
-    
+    font-family: 'Redressed', cursive;
 }
 body{
     margin:0;
     padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* HEADER & NAV */
@@ -20,8 +26,7 @@ header{
 }
 header h1{
     margin-left: 20px;
-text-transform: uppercase;
-
+    font-size: 45px;
 }
 .nav{
     width: 30%;
@@ -34,9 +39,8 @@ text-transform: uppercase;
 
 }
 .nav-ul li a{
-font-size: 24px;
+font-size: 34px;
 text-decoration: none;
-text-transform: uppercase;
 color: black;
 }
 .nav-ul li{
@@ -51,4 +55,101 @@ color: black;
     background-color: white;
 }
 
+/* MAIN & Body & POST */
+#title{
+    text-align: center;
+    font-size: 48px;
+}
+.postContainer{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
 
+.post{
+    width: 800px;
+    height: 100%;
+    background-color: lightgrey;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.post p {
+    
+    font-size: 30px;
+}
+figcaption{
+    display: flex;
+    justify-content: flex-end;
+}
+
+cite{
+    font-size: 25px;
+    margin: 5px;
+    padding-right: 10px;
+}
+
+/* FOOTER */
+footer{
+    width:100%;
+    height: max-content;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+}
+
+/* PUBLISH */
+#formContainer{
+    width: 80%;
+    margin:0 auto 200px auto;
+}
+#formContainer h1{
+    text-align: center;
+    font-size: 46px;
+}
+
+#formContainer form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#formContainer form label{
+font-size: 30px;
+}
+#formContainer form input {
+    margin:10px;
+    height: 30px;
+    outline: none;
+    border-radius: 10px;
+    font-family: 'Redressed', cursive;
+    font-size: 24px;
+    border:2px solid lightgrey;
+
+}
+#text{
+    font-family: 'Redressed', cursive;
+    border:2px solid lightgrey;
+    margin: 10px;
+    width: 50%;
+    height: 100px;
+    outline: none;
+    resize: none;
+    font-size: 24px;
+    border-radius: 10px;
+    padding-left: 10px;
+
+}
+
+#formContainer form button{
+    font-family: 'Redressed', cursive;
+    font-size: 30px;
+    background-color: lightgrey;
+    border-radius: 10px;
+    width: 140px;
+    height: 40px;
+    margin:10px
+}
