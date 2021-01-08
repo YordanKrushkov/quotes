@@ -1,23 +1,22 @@
 const { v4 } = require('uuid');
-const {saveQuote}= require('../controllers/database')
+const { saveQuote } = require('../controllers/database');
 class Quotes {
-    constructor(text,author){
-        this.id= v4();
-        this.text=text
-        this.author= author
-    }
+    constructor(text, author) {
+        this.id = v4();
+        this.text = text
+        this.author = author
+    };
 
-    save(callback){
+    save(callback) {
 
-        const newQuote ={
-            id:this.id,
-            text:this.text,
-            author:this.author,
-        }
+        const newQuote = {
+            id: this.id,
+            text: this.text,
+            author: this.author,
+        };
 
-        saveQuote(newQuote, callback)
-      
+        saveQuote(newQuote, callback);
     }
 }
 
-module.exports=Quotes
+module.exports = Quotes
