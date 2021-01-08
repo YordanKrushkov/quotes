@@ -1,18 +1,7 @@
 <h1>Hello</h1>
 
 <div class="postContainer">
-
-    <div class="post">
- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero repudiandae facilis nobis molestias autem repellendus, id fugiat atque tenetur quos?</p>
-    <p>author</p>
-    </div>
-    <div class="post">
- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero repudiandae facilis nobis molestias autem repellendus, id fugiat atque tenetur quos?</p>
-    <p>author</p>
-    </div>
-    <div class="post">
- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero repudiandae facilis nobis molestias autem repellendus, id fugiat atque tenetur quos?</p>
-    <p>author</p>
-    </div>
-   
+    {{#each quotes}}
+    {{>quote}}
+    {{/each}}
 </div>
